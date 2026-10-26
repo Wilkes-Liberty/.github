@@ -20,9 +20,9 @@ Run the repository's lint and tests locally. Its own `CONTRIBUTING.md` or `READM
 
 ## Changelog
 
-We follow [Keep a Changelog](https://keepachangelog.com/) and [SemVer](https://semver.org/). Add an entry to `CHANGELOG.md` under `[Unreleased]` when a change is one a user of the project would want to know about.
+We follow [Keep a Changelog](https://keepachangelog.com/) and [SemVer](https://semver.org/). Add a unique `changelog.d/<issue>-<slug>.md` fragment when a change is one a user of the project would want to know about.
 
-The changelog check is opt-in. A pull request must update `CHANGELOG.md` only when it carries the `changelog` label; a maintainer applies the label to pull requests whose changes belong in the changelog. Unlabelled pull requests pass. `drupal-mcp-connector` is the exception and expects an entry by default.
+The changelog check is opt-in. A pull request must add a fragment only when it carries the `changelog` label; a maintainer applies the label to pull requests whose changes belong in the changelog. Unlabelled pull requests pass. `drupal-mcp-connector` is the exception and expects an entry by default.
 
 ## Commit messages
 
@@ -35,3 +35,8 @@ Releases are immutable semver tags cut from the default branch, with `-rc.N` for
 ## Security
 
 Never commit secrets. Report vulnerabilities privately as [SECURITY.md](SECURITY.md) describes.
+
+## Independent changelog entries
+
+Follow [the fragment workflow](.github/CHANGELOG.md). Entry requirements remain
+opt-in via the `changelog` label; this does not require notes for every change.
